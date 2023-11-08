@@ -197,58 +197,33 @@
         .then(response => response.json())
         .then(data => {
             if (data.success) {
-                // Data berhasil dikirim ke API
-                // Tampilkan respons API atau lakukan apa yang Anda butuhkan
-                document.getElementById('response').innerHTML = 'Data berhasil dikirim.';
-            } else {
-                // Terjadi kesalahan dalam API
-                document.getElementById('response').innerHTML = 'Terjadi kesalahan: ' + data.message;
+                onst rows = data.split('\n');
+            const table = document.getElementById('dataTable');
+
+            // Tambahkan header tabel
+            const headerRow = table.insertRow(0);
+            const headerData = rows[0].split(',').map(col => col.trim());
+            headerData.forEach(col => {
+                const th = document.createElement('th');
+                th.textContent = col;
+                headerRow.appendChild(th);
+            });
+
+            // Tambahkan data ke dalam tabel
+            for (let i = 1; i < rows.length; i++) {
+                const rowData = rows[i].split(',').map(col => col.trim());
+                const row = table.insertRow(i);
+
+                rowData.forEach(col => {
+                    const cell = row.insertCell(-1);
+                    cell.textContent = col;
+                });
             }
         })
         .catch(error => {
             console.error('Terjadi kesalahan:', error);
         });
     });
-
-    $.ajax({
-        url: 'datapribadi.csv',
-        dataType: 'text',
-    }).done(successFunction);
-
-    function successFunction(data) {
-        var allRows = data.split(/\\r?\\n|\\r/);
-        var table = '<table>';
-        for (var singleRow = 0; singleRow < allRows.length; singleRow++) {
-            if (singleRow === 0) {
-                table += '<thead>';
-                table += '<tr>';
-            } else {
-                table += '<tr>';
-            }
-            var rowCells = allRows[singleRow].split(',');
-            for (var rowCell = 0; rowCell < rowCells.length; rowCell++) {
-                if (singleRow === 0) {
-                    table += '<th>';
-                    table += rowCells[rowCell];
-                    table += '</th>';
-                } else {
-                    table += '<td>';
-                    table += rowCells[rowCell];
-                    table += '</td>';
-                }
-            }
-            if (singleRow === 0) {
-                table += '</tr>';
-                table += '</thead>';
-                table += '<tbody>';
-            } else {
-                table += '</tr>';
-            }
-        }
-        table += '</tbody>';
-        table += '</table>';
-        document.getElementById('output').innerHTML = table;
-    }
 
 
     </script>
