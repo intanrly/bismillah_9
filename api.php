@@ -1,5 +1,5 @@
 <?php>
-$csvfile = 'C:\xampp\htdocs\week9\datapribadi.csv';
+$csvfile = 'datapribadi.csv';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $Id = $_POST["Id"];
@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Email tidak sama, silahkan coba lagi!";
     } else {
         $data = '$Id, $F_Name, $L_Name, $Email, $Email2, $Profesi\n';
-        file_put_contents('C:\xampp\htdocs\week9\datapribadi.csv', $data, FILE_APPEND);
+        file_put_contents('datapribadi.csv', $data, FILE_APPEND);
         echo 'Data telah ditambahkan!';
     }
 }
