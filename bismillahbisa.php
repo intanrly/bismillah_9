@@ -173,7 +173,7 @@
                     echo json_encode($response);
                 } else {
                     // Tampilkan data dari file CSV sebagai respons API
-                    $csv = array_map('str_getcsv', file($csvfile));
+                    $csv = array_map('str_getcsv', file($csvfile)); 
                     header('Content-Type: application/json');
                     echo json_encode($csv);
                 }
@@ -209,6 +209,47 @@
             console.error('Terjadi kesalahan:', error);
         });
     });
+
+    $.ajax({
+        url: 'datapribadi.csv',
+        dataType: 'text',
+    }).done(successFunction);
+
+    function successFunction(data) {
+        var allRows = data.split(/\\r?\\n|\\r/);
+        var table = '<table>';
+        for (var singleRow = 0; singleRow < allRows.length; singleRow++) {
+            if (singleRow === 0) {
+                table += '<thead>';
+                table += '<tr>';
+            } else {
+                table += '<tr>';
+            }
+            var rowCells = allRows[singleRow].split(',');
+            for (var rowCell = 0; rowCell < rowCells.length; rowCell++) {
+                if (singleRow === 0) {
+                    table += '<th>';
+                    table += rowCells[rowCell];
+                    table += '</th>';
+                } else {
+                    table += '<td>';
+                    table += rowCells[rowCell];
+                    table += '</td>';
+                }
+            }
+            if (singleRow === 0) {
+                table += '</tr>';
+                table += '</thead>';
+                table += '<tbody>';
+            } else {
+                table += '</tr>';
+            }
+        }
+        table += '</tbody>';
+        table += '</table>';
+        document.getElementById('output').innerHTML = table;
+    }
+
 
     </script>
 </body>
