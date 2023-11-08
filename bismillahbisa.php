@@ -197,29 +197,29 @@
         .then(response => response.json())
         .then(data => {
             if (data.success) {
-                onst rows = data.split('\n');
-            const table = document.getElementById('dataTable');
+                const rows = data.split('\n');
+                const table = document.getElementById('response');
 
-            // Tambahkan header tabel
-            const headerRow = table.insertRow(0);
-            const headerData = rows[0].split(',').map(col => col.trim());
-            headerData.forEach(col => {
-                const th = document.createElement('th');
-                th.textContent = col;
-                headerRow.appendChild(th);
-            });
-
-            // Tambahkan data ke dalam tabel
-            for (let i = 1; i < rows.length; i++) {
-                const rowData = rows[i].split(',').map(col => col.trim());
-                const row = table.insertRow(i);
-
-                rowData.forEach(col => {
-                    const cell = row.insertCell(-1);
-                    cell.textContent = col;
+                // Tambahkan header tabel
+                const headerRow = table.insertRow(0);
+                const headerData = rows[0].split(',').map(col => col.trim());
+                headerData.forEach(col => {
+                    const th = document.createElement('th');
+                    th.textContent = col;
+                    headerRow.appendChild(th);
                 });
-            }
-        })
+
+                // Tambahkan data ke dalam tabel
+                for (let i = 1; i < rows.length; i++) {
+                    const rowData = rows[i].split(',').map(col => col.trim());
+                    const row = table.insertRow(i);
+
+                    rowData.forEach(col => {
+                        const cell = row.insertCell(-1);
+                        cell.textContent = col;
+                    });
+                }
+            })
         .catch(error => {
             console.error('Terjadi kesalahan:', error);
         });
