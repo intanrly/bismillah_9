@@ -198,7 +198,7 @@
         .then(data => {
             if (data.success) {
                 const rows = data.split('\n');
-                const table = document.getElementById('response');
+                const table = document.getElementById('response').innerHTML;
 
                 // Tambahkan header tabel
                 const headerRow = table.insertRow(0);
