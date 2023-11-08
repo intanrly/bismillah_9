@@ -145,62 +145,38 @@
         </form>
 
         <div id="response">
-            <?php
-            if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                $Id = $_POST["Id"];
-                $F_Name = $_POST["F_Name"];
-                $L_Name = $_POST["L_Name"];
-                $Email = $_POST["Email"];
-                $Email2 = $_POST["Email2"];
-                $Profesi = $_POST["Profesi"];
+        <?php
+            // Pastikan ini adalah file CSV yang benar-benar ada
+            $csvfile = 'datapribadi.csv';
 
-                if ($Email != Email2) {
-                    echo "Email tidak sama, silahkan coba lagi!";
+            if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+                // Terima data dari formulir
+                $Id = $_POST['Id'];
+                $F_Name = $_POST['F_Name'];
+                $L_Name = $_POST['L_Name'];
+                $Email = $_POST['Email'];
+                $Email2 = $_POST['Email2'];
+                $Profesi = $_POST['Profesi'];
+                // Dapatkan data dari bidang lainnya
+
+                // Validasi data jika diperlukan
+                if (empty($Id) || empty($F_Name) || empty($L_Name) || empty($Email) || empty($Email2) || empty($Profesi)) {
+                    $response = array('success' => false, 'message' => 'Data tidak lengkap.');
                 } else {
-                    $data = '$Id, $F_Name, $L_Name, $Email, $Email2, $Profesi\n';
-                    file_put_contents('C:\Intan\TSD UNAIR\Semester 3\Alpro 2\week 9\datapribadi.csv', $data, FILE_APPEND);
-                    echo 'Data telah ditambahkan!';
+                    // Simpan data ke file CSV (tambahkan validasi dan pengolahan data lainnya jika diperlukan)
+                    $data = "$Id, $F_Name, $L_Name, $Email, $Email2, $Profesi\n";
+                    file_put_contents($csvfile, $data, FILE_APPEND);
+                    $response = array('success' => true, 'message' => 'Data berhasil disimpan.');
                 }
-            }
-            ?>
 
-            <?php
-            echo "<table border= '1'>
-            <tr>
-            <th>Id</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Email</th>
-            <th>Profesi</th>
-            </tr>";
-
-            $csvfile = 'C:\Intan\TSD UNAIR\Semester 3\Alpro 2\week 9\datapribadi.csv';
-
-            if (is_writable($csvfile)) {
-                // Izin penulisan ada, lanjutkan menulis ke file
-                // ...
+                header('Content-Type: application/json');
+                echo json_encode($response);
             } else {
-                // Izin penulisan tidak ada, tampilkan pesan kesalahan
-                echo 'Tidak bisa menulis ke file.';
-            }
-
-            if (file_exists($csvfile)) {
+                // Tampilkan data dari file CSV sebagai respons API
                 $csv = array_map('str_getcsv', file($csvfile));
-
-                foreach ($csv as $row) {
-                    echo "<tr>";
-                    echo "<td>" . $row[0] . "</td>";
-                    echo "<td>" . $row[1] . "</td>";
-                    echo "<td>" . $row[2] . "</td>";
-                    echo "<td>" . $row[3] . "</td>";
-                    echo "<td>" . $row[4] . "</td>";
-                    echo "</tr>";
-                }
-            } else {
-                echo "File CSV Tidak Ada!";
+                header('Content-Type: application/json');
+                echo json_encode($csv);
             }
-
-            echo "</table>";
             ?>
         </div>
     </div>
