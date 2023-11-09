@@ -184,48 +184,53 @@
     
     <script>
         document.getElementById('dataForm').addEventListener('submit', function(event) {
-        event.preventDefault();
+            event.preventDefault();
 
-        // Ambil data dari formulir
-        const data = new FormData(this);
+            // Ambil data dari formulir
+            const data = new FormData(this);
 
-        // Kirim data ke API menggunakan fetch
-        fetch('api.php', {
-            method: 'POST',
-            body: data
-        })
-        .then(response => response.json())
-        .then(data => {
-            if (data.success) {
-                const rows = data.split('\n');
-                const table = document.getElementById('response').innerHTML;
+            // Kirim data ke API menggunakan fetch
+            fetch('api.php', {
+                method: 'POST',
+                body: data
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    const rows = data.split('\n');
+                    const table = document.createElement('table');
 
-                // Tambahkan header tabel
-                const headerRow = table.insertRow(0);
-                const headerData = rows[0].split(',').map(col => col.trim());
-                headerData.forEach(col => {
-                    const th = document.createElement('th');
-                    th.textContent = col;
-                    headerRow.appendChild(th);
-                });
-
-                // Tambahkan data ke dalam tabel
-                for (let i = 1; i < rows.length; i++) {
-                    const rowData = rows[i].split(',').map(col => col.trim());
-                    const row = table.insertRow(i);
-
-                    rowData.forEach(col => {
-                        const cell = row.insertCell(-1);
-                        cell.textContent = col;
+                    // Tambahkan header tabel
+                    const headerRow = table.insertRow(0);
+                    const headerData = rows[0].split(',').map(col => col.trim());
+                    headerData.forEach(col => {
+                        const th = document.createElement('th');
+                        th.textContent = col;
+                        headerRow.appendChild(th);
                     });
+
+                    // Tambahkan data ke dalam tabel
+                    for (let i = 1; i < rows.length; i++) {
+                        const rowData = rows[i].split(',').map(col => col.trim());
+                        const row = table.insertRow(i);
+
+                        rowData.forEach(col => {
+                            const cell = row.insertCell(-1);
+                            cell.textContent = col;
+                        });
+                    }
+
+                    // Tambahkan tabel ke dalam elemen dengan id 'response'
+                    document.getElementById('response').appendChild(table);
+                } else {
+                    // Terjadi kesalahan dalam API
+                    document.getElementById('response').innerHTML = 'Terjadi kesalahan: ' + data.message;
                 }
             })
-        .catch(error => {
-            console.error('Terjadi kesalahan:', error);
+            .catch(error => {
+                console.error('Terjadi kesalahan:', error);
+            });
         });
-    });
-
-
     </script>
 </body>
 </html>
