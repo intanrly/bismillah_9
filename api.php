@@ -10,15 +10,26 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $profesi = $_POST['profesi'];
     // Dapatkan data dari bidang lainnya
 
-    $list = array (
-        array($id,$F_name,$L_name,$email,$email2,$profesi)
-    );
+    $url = 'http://intanurul04.alwaysdata.net/bismillah_9/getcsv2json.php';
 
-    $file = fopen('datapribadi.csv','a');
-    foreach ($list as $fields) {
-        fputcsv($file, $fields);
+    $ch = curl_init($url);
+
+    // Set konfigurasi untuk melakukan POST
+    curl_setopt($ch, CURLOPT_POST, 1);
+    curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+    // Jalankan request
+    $response = curl_exec($ch);
+
+    // Tutup koneksi cURL
+    curl_close($ch);
+
+    // Handle response
+    if ($response === false) {
+        echo 'Ada kesalahan dalam permintaan POST.';
+    } else {
+        echo 'Data berhasil dikirim.';
     }
-
-    fclose($file);
 }
 ?>
