@@ -81,6 +81,7 @@ function fetchData() {
     }
 
     function updatePagination() {
+        const urlInput = document.getElementById('url').value;
         const dataTable = document.getElementById('data-table');
         const totalEntries = dataTable.getElementsByTagName('tr').length - 1; // Kurangi satu untuk header
 
