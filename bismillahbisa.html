@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Data</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1b22f1;
+            margin: 0;
+            padding: 0;
+        }
+        
+        #container {
+            text-align: center;
+            background-color: #48c8f3;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Judul */
+        h1 {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #67bbf7;
+        }
+        
+        table, th, td {
+            border: 1px solid #4107ff;
+            padding: 10px;
+        }
+
+        #id {
+            background-color: #ffffff;
+            color: #000000;
+            border: 1px solid #296fa8;
+            padding: 10px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-bottom: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        #F_Name {
+            background-color: #ffffff;
+            color: #000000;
+            border: 1px solid #296fa8;
+            padding: 10px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-bottom: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        #L_Name {
+            background-color: #ffffff;
+            color: #000000;
+            border: 1px solid #296fa8;
+            padding: 10px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-bottom: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        #email {
+            background-color: #ffffff;
+            color: #000000;
+            border: 1px solid #296fa8;
+            padding: 10px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-bottom: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        #email2 {
+            background-color: #ffffff;
+            color: #000000;
+            border: 1px solid #296fa8;
+            padding: 10px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-bottom: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        #profesi {
+            background-color: #ffffff;
+            color: #000000;
+            border: 1px solid #296fa8;
+            padding: 10px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-bottom: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        #simpan-button {
+            background-color: #007BFF;
+            color: #fff;
+            border: 1px solid #fff;
+            padding: 10px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-bottom: 10px;
+            transition: background-color 0.3s ease;
+        }
+    </style>
+    <h1>PRAKTIKUM WEEK 9 ALGORITMA PEMROGRAMAN 2</h1>
+    <h2>INTAN NURUL LAILY - 164221060</h2>
+    <h3>Post Data</h3>
+</head>
+<body>
+    <div class="container">
+        <form action="api.php" method="post">
+            <div class="md">
+                <label for="id" class="form-label">ID:</label>
+                <input type="text" class="form-control" id="id" placeholder="Masukkan ID" name="id">
+            </div>
+            <div class="md">
+                <label for="F_name" class="form-label">First Name:</label>
+                <input type="text" class="form-control" id="F_name" placeholder="Masukkan nama depan" name="F_name">
+            </div>
+            <div class="md">
+                <label for="L_name" class="form-label">Last Name:</label>
+                <input type="text" class="form-control" id="L_name" placeholder="Masukkan nama akhir" name="L_name">
+            </div>
+            <div class="md">
+                <label for="email" class="form-label">Email:</label>
+                <input type="text" class="form-control" id="email" placeholder="Masukkan alamat email" name="email">
+            </div>
+            <div class="md">
+                <label for="email2" class="form-label">Second Email:</label>
+                <input type="text" class="form-control" id="email2" placeholder="Masukkan alamat email kedua" name="email2">
+            </div>
+            <div class="md">
+                <label for="profesi" class="form-label">Profession:</label>
+                <input type="text" class="form-control" id="profesi" placeholder="Masukkan profesi" name="profesi">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    
+        <div class="the_table">
+            <table id="example" class="table table-bordered table-striped" style="width:100%">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Email</th>
+                        <th>Second Email</th>
+                        <th>Profession</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+    
+    <script src="cobaan90.js"></script>
+</body>
+</html>
