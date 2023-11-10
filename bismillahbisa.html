@@ -49,7 +49,7 @@
             transition: background-color 0.3s ease;
         }
 
-        #F_Name {
+        #firstName {
             background-color: #ffffff;
             color: #000000;
             border: 1px solid #296fa8;
@@ -60,7 +60,7 @@
             transition: background-color 0.3s ease;
         }
 
-        #L_Name {
+        #lastName {
             background-color: #ffffff;
             color: #000000;
             border: 1px solid #296fa8;
@@ -117,50 +117,36 @@
     </style>
 </head>
 <body>
-    <div id="container">
-        <h1>PRAKTIKUM WEEK 9 ALGORITMA PEMROGRAMAN 2</h1>
-        <h2>INTAN NURUL LAILY - 164221060</h2>
-        <h3>Post Data</h3>
+    <h1>PRAKTIKUM WEEK 9 ALGORITMA PEMROGRAMAN 2</h1>
+    <h2>INTAN NURUL LAILY - 164221060</h2>
+    <h3>Post Data</h3>
 
-        <form id="dataForm">
-            <label for="Id">Id:</label>
-            <input type="text" name="Id" id="Id" required>
-            <br>
-            <label for="F_Name">First Name:</label>
-            <input type="text" name="F_Name" id="F_Name" required>
-            <br>
-            <label for="L_Name">Last Name:</label>
-            <input type="text" name="L_Name" id="L_Name" required>
-            <br>
-            <label for="Email">Email:</label>
-            <input type="email" name="Email" id="Email" required>
-            <br>
-            <label for="Email2">Email2:</label>
-            <input type="email" name="Email2" id="Email2" required>
-            <br>
-            <label for="Profesi">Profesi:</label>
-            <input type="text" name="Profesi" id="Profesi" required>
-            <br>
-            <button type="submit" id="simpan-button">Submit</button>
-        </form>
+    <table id="mahasiswaTable">
+        <tr>
+            <th>Id</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Email2</th>
+            <th>Profesi</th>
+        </tr>
+    </table>
 
-        <div class="the_table">
-            <table id="example" class="table table-bordered table-striped" style="width:100%">
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>First Name</th>
-                        <th>Last Name</th>
-                        <th>Email</th>
-                        <th>Second Email</th>
-                        <th>Profession</th>
-                    </tr>
-                </thead>
-            </table>
-        </div>
-
-        <div id="response"></div>
-    </div>
+    <form id="addForm">
+        <label for="id">Id:</label>
+        <input type="text" id="id" name="id" required><br><br>
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" required><br><br>
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" required><br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+        <label for="email2">Confirm Email:</label>
+        <input type="email" id="email2" name="email2" required><br><br>
+        <label for="profesi">Profesi:</label>
+        <input type="text" id="profesi" name="profesi" required><br><br>
+        <input type="submit" value="Submit">
+    </form>
 
     <script scr = "script.js"></script>
 </body>
