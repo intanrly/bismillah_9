@@ -200,30 +200,34 @@
             document.getElementById('addForm').reset();
         }
 
-        function updateTableFromCSV() {
-            // Mengambil nilai pencarian dari input
-            const searchValue = document.getElementById('searchInput').value.toLowerCase();
-            const rowsToFilter = table.getElementsByTagName('tr');
-                    for (let i = 0; i < rowsToFilter.length; i++) {
-                        const cells = rowsToFilter[i].getElementsByTagName('td');
-                        let shouldShowRow = false;
-                        for (let j = 0; j < cells.length; j++) {
-                            const cellText = cells[j].textContent.toLowerCase();
-                            if (cellText.includes(searchValue)) {
-                                shouldShowRow = true;
-                                break;
-                            }
-                        }
-                        rowsToFilter[i].style.display = shouldShowRow ? '' : 'none';
-                    }
-                };
-
-        document.getElementById('searchInput').addEventListener('input', updateTableFromCSV);
-
         getDataFromCSV();
 
         document.getElementById('addForm').addEventListener('submit', addDataToTable);
-        ocument.getElementById('searchInput').addEventListener('input', updateTableFromCSV);
+
+        function searchTable() {
+            const input = document.getElementById('searchInput').value.toLowerCase();
+            const table = document.getElementById('mahasiswaTable');
+            const rows = table.getElementsByTagName('tr');
+
+            for (let i = 1; i < rows.length; i++) {
+                const cells = rows[i].getElementsByTagName('td');
+                let found = false;
+
+                for (let j = 0; j < cells.length; j++) {
+                    const cellText = cells[j].textContent.toLowerCase();
+                    if (cellText.includes(input)) {
+                        found = true;
+                        break;
+                    }
+                }
+
+                if (found) {
+                    rows[i].style.display = '';
+                } else {
+                    rows[i].style.display = 'none';
+                }
+            }
+        }
     </script>
 </body>
 </html>
