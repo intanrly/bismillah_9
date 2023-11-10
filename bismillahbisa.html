@@ -163,8 +163,34 @@
                 </thead>
             </table>
         </div>
+        <div id="table-table">
+            <div class="table-controls">
+              <div class="table-controls-left">
+                <span>Tampilkan</span>
+                <select id="entries-select" onchange="entriesPerPage = this.value; currentPage = 1; displayTableData(); updatePagination();">
+                  <option value="10">10</option>
+                  <option value="25">25</option>
+                  <option value="50">50</option>
+                </select>
+                <span>entri</span>
+              </div>
+              <div class="table-controls-right">
+                <span>Cari: </span>
+                <input type="text" id="search-input" onkeyup="searchTable()">
+              </div>
+            </div>
+          
+            <table id="data-table"></table>
+          </div>
+          
+          <div id="pagination">
+            <button id="pagination-prev" onclick="changePage(-1);" style="float: left;" disabled="">Sebelumnya</button>
+            <span id="pagination-info" style="display: inline-block; margin: 0 auto;">Menampilkan 1 - -1 dari -1 entri</span>
+            <button id="pagination-next" onclick="changePage(1);" style="float: right;">Selanjutnya</button>    
+          </div>
     </div>
-    
-    <script src="cobaan90.js"></script>
+
+    <script src="tabel.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
