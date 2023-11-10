@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Dapatkan data dari bidang lainnya
 
     $list = array (
-        array($id,$firstName,$lastName,$email,$email2,$profesi)
+        array($id,$F_name,$L_name,$email,$email2,$profesi)
     );
 
     $file = fopen('datapribadi.csv','a');
