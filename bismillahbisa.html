@@ -115,12 +115,13 @@
             transition: background-color 0.3s ease;
         }
     </style>
-    <h1>PRAKTIKUM WEEK 9 ALGORITMA PEMROGRAMAN 2</h1>
-    <h2>INTAN NURUL LAILY - 164221060</h2>
-    <h3>Post Data</h3>
 </head>
 <body>
     <div id="container">
+        <h1>PRAKTIKUM WEEK 9 ALGORITMA PEMROGRAMAN 2</h1>
+        <h2>INTAN NURUL LAILY - 164221060</h2>
+        <h3>Post Data</h3>
+
         <form id="dataForm">
             <label for="Id">Id:</label>
             <input type="text" name="Id" id="Id" required>
@@ -157,67 +158,63 @@
                 </thead>
             </table>
         </div>
+
         <div class="table-controls-right">
             <span>Cari: </span>
             <input type="text" id="search-input" onkeyup="searchTable()">
         </div>
+
+        <div id="response"></div>
     </div>
 
     <script>
-        document.getElementById('dataForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-
-            // Ambil data dari formulir
-            const data = new FormData(this);
-
-            // Kirim data ke API menggunakan fetch
-            fetch('api.php', {
-                method: 'POST',
-                body: data
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    const rows = data.split('\n');
-                    const table = document.createElement('table');
+        window.onload = () => {
+            fetch('https://intanurul04.alwaysdata.net/bismillah_9/getcsv2json.php')
+                .then(response => response.json())
+                .then(data => {
+                    const table = document.getElementById('example');
 
                     // Tambahkan header tabel
                     const headerRow = table.insertRow(0);
-                    const headerData = rows[0].split(',').map(col => col.trim());
-                    headerData.forEach(col => {
-                        const th = document.createElement('th');
-                        th.textContent = col;
-                        headerRow.appendChild(th);
-                    });
-
-                    // Tambahkan data ke dalam tabel
-                    for (let i = 1; i < rows.length; i++) {
-                        const rowData = rows[i].split(',').map(col => col.trim());
-                        const row = table.insertRow(i);
-
-                        rowData.forEach(col => {
-                            const cell = row.insertCell(-1);
-                            cell.textContent = col;
-                        });
+                    for (const key in data[0]) {
+                        if (data[0].hasOwnProperty(key)) {
+                            const headerCell = document.createElement('th');
+                            headerCell.textContent = key;
+                            headerRow.appendChild(headerCell);
+                        }
                     }
 
-                    // Tambahkan tabel ke dalam elemen dengan id 'response'
-                    document.getElementById('response').appendChild(table);
-                } else {
-                    // Terjadi kesalahan dalam API
-                    document.getElementById('response').innerHTML = 'Terjadi kesalahan: ' + data.message;
-                }
-            })
-            .catch(error => {
-                console.error('Terjadi kesalahan:', error);
-            });
-        });
-    
+                    // Tambahkan data ke dalam tabel
+                    data.forEach(function (item, index) {
+                        const dataRow = table.insertRow(index + 1);
+                        for (const key in item) {
+                            if (item.hasOwnProperty(key)) {
+                                const dataCell = dataRow.insertCell(-1);
+                                dataCell.textContent = item[key];
+                            }
+                        }
+                    });
+
+                    // Inisialisasi fungsi Datatables (harus dilakukan setelah meletakkan data pada tabel)
+                    $(document).ready(function () {
+                        $('#example').DataTable();
+                    });
+                })
+                .catch(error => {
+                    console.error('Terjadi kesalahan:', error);
+                });
+        };
+
+        // Fungsi pencarian tabel
+        function searchTable() {
+            const searchInput = document.getElementById('search-input').value.toLowerCase();
+            $('#example').DataTable().search(searchInput).draw();
+        }
+    </script>
 
 
     <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
     <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="script.js"></script>
 </body>
 </html>
