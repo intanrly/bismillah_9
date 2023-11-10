@@ -168,48 +168,54 @@
     </div>
 
     <script>
-        window.onload = () => {
-            fetch('https://intanurul04.alwaysdata.net/bismillah_9/getcsv2json.php')
-                .then(response => response.json())
-                .then(data => {
+        document.getElementById('dataForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const data = new FormData(this);
+
+            fetch('http://intanurul04.alwaysdata.net/bismillah_9/getcsv2json.php', {
+                method: 'POST',
+                body: data
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    // Dapatkan data CSV yang diterima
+                    const rows = data.split('\n');
                     const table = document.getElementById('example');
 
+                    // Hapus konten tabel sebelum menambahkan yang baru
+                    table.innerHTML = '';
+
                     // Tambahkan header tabel
-                    const headerRow = table.insertRow(0);
-                    for (const key in data[0]) {
-                        if (data[0].hasOwnProperty(key)) {
-                            const headerCell = document.createElement('th');
-                            headerCell.textContent = key;
-                            headerRow.appendChild(headerCell);
-                        }
-                    }
+                    const headerRow = document.createElement('tr');
+                    const headerData = rows[0].split(',').map(col => col.trim());
+                    headerData.forEach(col => {
+                        const th = document.createElement('th');
+                        th.textContent = col;
+                        headerRow.appendChild(th);
+                    });
+                    table.appendChild(headerRow);
 
                     // Tambahkan data ke dalam tabel
-                    data.forEach(function (item, index) {
-                        const dataRow = table.insertRow(index + 1);
-                        for (const key in item) {
-                            if (item.hasOwnProperty(key)) {
-                                const dataCell = dataRow.insertCell(-1);
-                                dataCell.textContent = item[key];
-                            }
-                        }
-                    });
-
-                    // Inisialisasi fungsi Datatables (harus dilakukan setelah meletakkan data pada tabel)
-                    $(document).ready(function () {
-                        $('#example').DataTable();
-                    });
-                })
-                .catch(error => {
-                    console.error('Terjadi kesalahan:', error);
-                });
-        };
-
-        // Fungsi pencarian tabel
-        function searchTable() {
-            const searchInput = document.getElementById('search-input').value.toLowerCase();
-            $('#example').DataTable().search(searchInput).draw();
-        }
+                    for (let i = 1; i < rows.length; i++) {
+                        const rowData = rows[i].split(',').map(col => col.trim());
+                        const row = document.createElement('tr');
+                        rowData.forEach(col => {
+                            const cell = document.createElement('td');
+                            cell.textContent = col;
+                            row.appendChild(cell);
+                        });
+                        table.appendChild(row);
+                    }
+                } else {
+                    // Tampilkan pesan kesalahan jika diperlukan
+                }
+            })
+            .catch(error => {
+                console.error('Terjadi kesalahan:', error);
+            });
+        });
     </script>
 
 
