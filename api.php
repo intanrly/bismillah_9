@@ -1,6 +1,4 @@
 <?php
-// Pastikan ini adalah file CSV yang benar-benar ada
-$csvfile = 'datapribadi.csv';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Terima data dari formulir

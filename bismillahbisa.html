@@ -120,35 +120,29 @@
     <h3>Post Data</h3>
 </head>
 <body>
-    <div class="container">
-        <form action="api.php" method="post">
-            <div class="md">
-                <label for="id" class="form-label">ID:</label>
-                <input type="text" class="form-control" id="id" placeholder="Masukkan ID" name="id">
-            </div>
-            <div class="md">
-                <label for="F_name" class="form-label">First Name:</label>
-                <input type="text" class="form-control" id="F_name" placeholder="Masukkan nama depan" name="F_name">
-            </div>
-            <div class="md">
-                <label for="L_name" class="form-label">Last Name:</label>
-                <input type="text" class="form-control" id="L_name" placeholder="Masukkan nama akhir" name="L_name">
-            </div>
-            <div class="md">
-                <label for="email" class="form-label">Email:</label>
-                <input type="text" class="form-control" id="email" placeholder="Masukkan alamat email" name="email">
-            </div>
-            <div class="md">
-                <label for="email2" class="form-label">Second Email:</label>
-                <input type="text" class="form-control" id="email2" placeholder="Masukkan alamat email kedua" name="email2">
-            </div>
-            <div class="md">
-                <label for="profesi" class="form-label">Profession:</label>
-                <input type="text" class="form-control" id="profesi" placeholder="Masukkan profesi" name="profesi">
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+    <div id="container">
+        <form id="dataForm">
+            <label for="Id">Id:</label>
+            <input type="text" name="Id" id="Id" required>
+            <br>
+            <label for="F_Name">First Name:</label>
+            <input type="text" name="F_Name" id="F_Name" required>
+            <br>
+            <label for="L_Name">Last Name:</label>
+            <input type="text" name="L_Name" id="L_Name" required>
+            <br>
+            <label for="Email">Email:</label>
+            <input type="email" name="Email" id="Email" required>
+            <br>
+            <label for="Email2">Email2:</label>
+            <input type="email" name="Email2" id="Email2" required>
+            <br>
+            <label for="Profesi">Profesi:</label>
+            <input type="text" name="Profesi" id="Profesi" required>
+            <br>
+            <button type="submit" id="simpan-button">Submit</button>
         </form>
-    
+
         <div class="the_table">
             <table id="example" class="table table-bordered table-striped" style="width:100%">
                 <thead>
@@ -168,6 +162,58 @@
             <input type="text" id="search-input" onkeyup="searchTable()">
         </div>
     </div>
+
+    <script>
+        document.getElementById('dataForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // Ambil data dari formulir
+            const data = new FormData(this);
+
+            // Kirim data ke API menggunakan fetch
+            fetch('api.php', {
+                method: 'POST',
+                body: data
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    const rows = data.split('\n');
+                    const table = document.createElement('table');
+
+                    // Tambahkan header tabel
+                    const headerRow = table.insertRow(0);
+                    const headerData = rows[0].split(',').map(col => col.trim());
+                    headerData.forEach(col => {
+                        const th = document.createElement('th');
+                        th.textContent = col;
+                        headerRow.appendChild(th);
+                    });
+
+                    // Tambahkan data ke dalam tabel
+                    for (let i = 1; i < rows.length; i++) {
+                        const rowData = rows[i].split(',').map(col => col.trim());
+                        const row = table.insertRow(i);
+
+                        rowData.forEach(col => {
+                            const cell = row.insertCell(-1);
+                            cell.textContent = col;
+                        });
+                    }
+
+                    // Tambahkan tabel ke dalam elemen dengan id 'response'
+                    document.getElementById('response').appendChild(table);
+                } else {
+                    // Terjadi kesalahan dalam API
+                    document.getElementById('response').innerHTML = 'Terjadi kesalahan: ' + data.message;
+                }
+            })
+            .catch(error => {
+                console.error('Terjadi kesalahan:', error);
+            });
+        });
+    
+
 
     <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
     <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
