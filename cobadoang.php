@@ -67,14 +67,12 @@
         transition: background-color 0.3s ease
     }
 
-    #container {
-        text-align: center;
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         justify-content: center;
-        background-color: #0a2a43;
-        padding: 20px;
-        max-width: 100%;
-        margin: 0 auto;
-        margin-bottom: 20px;
+        height: 100vh;
     }
 
 </style>
