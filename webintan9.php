@@ -51,18 +51,18 @@
         padding: 10px 20px;
         border-radius: 10px;
         cursor: pointer;
-        margin-bottom: 5px;
+        margin-bottom: 10px;
         transition: background-color 0.3s ease;
     }
 
     #submit {
         text-align: center;
-        background-color: #ffffff;
-        color: #0a2a43;
+        background-color: #0a2a43;
+        color: #ffff;
         border: 1px solid #67bbf7;
         border-radius: 10px;
         cursor: pointer;
-        margin-bottom: 5px;
+        margin-bottom: 10px;
         transition: background-color 0.6s ease;
         padding: 10px 20px;
     }
@@ -81,7 +81,7 @@
 
     .container {
         text-align: center;
-        background-color: #0a2a43;
+        background-color: #255980;
         padding: 20px;
         border-radius: 10px;
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
