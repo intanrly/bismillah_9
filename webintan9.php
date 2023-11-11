@@ -56,6 +56,12 @@
         transition: background-color 0.3s ease;
     }
 
+    .input input {
+        background: none; /* Menghapus kotak input */
+        border: none; /* Menghapus garis input */
+        outline: none; /* Menghapus outline saat focus */
+    }
+
     #submit {
         text-align: center;
         background-color: #0a2a43;
