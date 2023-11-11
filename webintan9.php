@@ -2,8 +2,6 @@
 <html>
 <head>
     <title>PRAKTIKUM WEEK 9 ALGORITMA PEMROGRAMAN 2</title>
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Didot&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css">
     <style>
     body {
@@ -51,7 +49,6 @@
         background-color: #ffffff;
         color: #ffffff;
         border: 1px solid #296fa8;
-        padding: 10px 20px;
         border-radius: 10px;
         margin-bottom: 5px;
         transition: background-color 0.3s ease;
@@ -83,10 +80,10 @@
     }
 
     .container {
+        display: flex;
         align-items: center;
         justify-content: center;
         height: 100vh;
-        width: 40%;
     }
 
 </style>
