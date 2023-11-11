@@ -75,7 +75,7 @@
         padding: 10px 20px;
     }
 
-    #input2 {
+    #searchInput {
         text-align: center;
         background-color: #ffffff;
         color: #ffffff;
@@ -84,7 +84,6 @@
         border-radius: 10px;
         cursor: pointer;
         margin-bottom: 10px;
-        transition: background-color 0.3s ease
     }
 
     .container {
@@ -131,10 +130,8 @@
         </form>
     </div>
 
-    <div>
-        <div class="label">Search</div>
-        <div class="input2"><input type="text" id="searchInput" oninput="searchTable()" placeholder="Cari Data"></div>
-    </div>
+    <label for="searchInput">Search</label>
+    <input type="text" id="searchInput" oninput="searchTable()" placeholder="Cari Data">
 
     <table id="mahasiswaTable">
         <tr>
