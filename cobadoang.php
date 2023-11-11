@@ -32,22 +32,13 @@
         color: #ffffff;
     }
 
-    label {
-        color: #ffffff;
-        text-align: center;
-        justify-content: center;
-
-    }
-
     #id,
     #firstName,
     #LastName,
     #email,
     #email2,
-    #profesi,
-    #submit {
+    #profesi {
         text-align: center;
-        align-items: center;
         background-color: #ffffff;
         color: #ffffff;
         border: 1px solid #296fa8;
@@ -56,11 +47,10 @@
         cursor: pointer;
         margin-bottom: 5px;
         transition: background-color 0.3s ease;
-        justify-content: center;
     }
 
     #submit {
-        background-color: #0b3d61;
+        background-color: #0a2a43;
         color: #fff;
         border: 1px solid #67bbf7;
     }
@@ -79,6 +69,7 @@
 
     #container {
         text-align: center;
+        justify-content: center;
         background-color: #0a2a43;
         padding: 20px;
         max-width: 100%;
