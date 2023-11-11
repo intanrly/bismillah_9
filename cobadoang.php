@@ -18,7 +18,6 @@
         border-radius: 10px;
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
         width: 600px;
-        height: 600px;
         margin: 0 auto;
         margin-bottom: 20px;
     }
@@ -109,7 +108,7 @@
             <div class="label">Last Name :</div>
             <div class="input"><input type="text" id="LastName" name="LastName" placeholder="Masukkan Nama Akhir Anda" required><br><br></div>
             <div class="label">Email :</div>
-            <div class="input"><input type="email" id="email" name="email" placeholder="Masukkan Email Anda" required><br><br></div></div>
+            <div class="input"><input type="email" id="email" name="email" placeholder="Masukkan Email Anda" required><br><br></div>
             <div class="label">Confirm Email :</div>
             <div class="input"><input type="email" id="email2" name="email2" placeholder="Pastikan Email Anda Sama" required><br><br></div>
             <div class="label">Profesi :</div>
