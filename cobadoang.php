@@ -37,13 +37,7 @@
         text-align: center;
     }
 
-    #id,
-    #firstName,
-    #LastName,
-    #email,
-    #email2,
-    #profesi,
-    #submit {
+    input {
         text-align: center;
         align-items: center;
         background-color: #ffffff;

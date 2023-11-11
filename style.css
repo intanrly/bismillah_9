@@ -64,17 +64,17 @@ section img {
     position: relative;
     color: #fff;
     font-size: 20px;
-    z-index: 1;
+    z-index: 2;
 }
 
 #text3 {
     font-family: 'Poppins', sans-serif;
     position: relative;
     color: #fff;
-    font-size: 30px;
-    z-index: 1;
+    font-size: 40px;
+    z-index: 3;
 }
 
 #road {
-    z-index: 2;
+    z-index: 4;
 }
