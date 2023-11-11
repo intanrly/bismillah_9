@@ -34,7 +34,7 @@
 
     h3 {
         text-align: center;
-        color: #fffff;
+        color: #ffffff;
         font-size: 25px;
         margin-bottom: 5px;
         text-transform: uppercase;
@@ -108,7 +108,7 @@
         <h2 id="text2">Post Data</h2>
     </section>
 
-    <h3>Intan Nurul Laily - 164221060</h3?
+    <h3>Intan Nurul Laily - 164221060</h3>
 
     <div class="container">
         <form id="addForm" method="post" action="">
