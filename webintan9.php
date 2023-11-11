@@ -54,13 +54,13 @@
         border-radius: 10px;
         cursor: pointer;
         margin-bottom: 10px;
-        transition: background-color 0.3s ease;
     }
 
     .input input {
-        background: none; /* Menghapus kotak input */
-        border: none; /* Menghapus garis input */
-        outline: none; /* Menghapus outline saat focus */
+        background: none;
+        border: none;
+        outline: none;
+        text-align: center;
     }
 
     #submit {
