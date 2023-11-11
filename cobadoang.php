@@ -53,7 +53,6 @@
         border: 1px solid #296fa8;
         padding: 10px 20px;
         border-radius: 10px;
-        cursor: pointer;
         margin-bottom: 5px;
         transition: background-color 0.3s ease;
     }
@@ -84,7 +83,6 @@
 
     .container {
         display: flex;
-        flex-direction: column;
         align-items: center;
         justify-content: center;
         height: 100vh;
