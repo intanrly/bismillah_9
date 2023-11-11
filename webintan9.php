@@ -78,7 +78,7 @@
     #searchInput {
         text-align: center;
         background-color: #ffffff;
-        color: #ffffff;
+        color: #0b3d61;
         border: 1px solid #fff;
         padding: 10px 20px;
         border-radius: 10px;
@@ -130,7 +130,7 @@
         </form>
     </div>
 
-    <label for="searchInput">Search</label>
+    <label for="searchInput" class="label">Search</label>
     <input type="text" id="searchInput" oninput="searchTable()" placeholder="Cari Data">
 
     <table id="mahasiswaTable">
