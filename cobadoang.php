@@ -17,7 +17,8 @@
         padding: 20px;
         border-radius: 10px;
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-        max-width: 600px;
+        width: 600px;
+        height: 600px;
         margin: 0 auto;
         margin-bottom: 20px;
     }
