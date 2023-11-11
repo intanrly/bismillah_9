@@ -24,6 +24,7 @@
 
     /* Judul */
     h1, h2, h3 {
+        font-family: 'Montserrat', sans-serif;
         text-align: center;
         color: #296fa8;
         font-size: 20px;
@@ -100,19 +101,19 @@
 
     <div id="container">
         <form id="addForm" method="post" action="">
-            <label for="id">Id:</label>
-            <input type="text" id="id" name="id" placeholder="Masukkan Id Anda" required><br><br>
-            <label for="firstName">First Name:</label>
-            <input type="text" id="firstName" name="firstName" placeholder="Masukkan Nama Awal Anda" required><br><br>
-            <label for="LastName">Last Name:</label>
-            <input type="text" id="LastName" name="LastName" placeholder="Masukkan Nama Akhir Anda" required><br><br>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="Masukkan Email Anda" required><br><br>
-            <label for="email2">Confirm Email:</label>
-            <input type="email" id="email2" name="email2" placeholder="Pastikan Email Anda Sama" required><br><br>
-            <label for="profesi">Profesi:</label>
-            <input type="text" id="profesi" name="profesi" placeholder="Masukkan Profesi Anda." required><br><br>
-            <input type="submit" id="submit" value="Submit">
+            <div class="label">ID :</div>
+            <div class="input"><input type="text" id="id" name="id" placeholder="Masukkan Id Anda" required><br><br></div>
+            <div class="label">First Name :</div>
+            <div class="input"><input type="text" id="firstName" name="firstName" placeholder="Masukkan Nama Awal Anda" required><br><br></div>
+            <div class="label">Last Name :</div>
+            <div class="input"><input type="text" id="LastName" name="LastName" placeholder="Masukkan Nama Akhir Anda" required><br><br></div>
+            <div class="label">Email :</div>
+            <div class="input"><input type="email" id="email" name="email" placeholder="Masukkan Email Anda" required><br><br></div></div>
+            <div class="label">Confirm Email :</div>
+            <div class="input"><input type="email" id="email2" name="email2" placeholder="Pastikan Email Anda Sama" required><br><br></div>
+            <div class="label">Profesi :</div>
+            <div class="input"><input type="text" id="profesi" name="profesi" placeholder="Masukkan Profesi Anda." required><br><br></div>
+            <div class="input"><input type="submit" id="submit" value="Submit">
         </form>
     </div>
 
