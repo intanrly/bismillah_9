@@ -51,20 +51,12 @@ section img {
     pointer-events: none;
 }
 
-#text1 {
-    font-family: 'Poppins', sans-serif;
-    position: relative;
-    color: #fff;
-    font-size: 20px;
-    z-index: 1;
-}
-
 #text2 {
     font-family: 'Poppins', sans-serif;
     position: relative;
     color: #fff;
-    font-size: 20px;
-    z-index: 2;
+    font-size: 5em;
+    z-index: 1;
 }
 
 #text3 {
@@ -76,5 +68,5 @@ section img {
 }
 
 #road {
-    z-index: 4;
+    z-index: 2;
 }

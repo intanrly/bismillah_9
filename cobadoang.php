@@ -36,6 +36,9 @@
         color: #ffffff;
         text-align: center;
         justify-content: center;
+        display: grid;
+        place-items: center;
+
     }
 
     input {
@@ -49,10 +52,6 @@
         cursor: pointer;
         margin-bottom: 5px;
         transition: background-color 0.3s ease;
-        align-items: center;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
         justify-content: center;
     }
 
@@ -83,9 +82,8 @@
         <img src ="moon.png" id="moon">
         <img src ="mountain.png" id="mountain">
         <img src ="road.png" id="road">
-        <h1 id="text1">PRAKTIKUM WEEK 9 ALGORITMA PEMROGRAMAN 2</h1>
         <h2 id="text2">INTAN NURUL LAILY - 164221060</h2>
-        <h3 id="text3">Post Data</h3>
+        <h3 id="text3">Praktikum W9 - Post Data</h3>
     </section>
 
     <form id="addForm" method="post" action="">
