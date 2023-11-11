@@ -7,7 +7,7 @@
     <style>
     body {
         font-family: 'Arial', sans-serif;
-        background-color: #f9f9f9;
+        background-color: linear-gradient(to bottom right, #ff0000, #0000ff);
         line-height: 1.6;
         margin: 0;
         padding: 0;
@@ -24,6 +24,7 @@
         width: 80%;
         margin: 0 auto;
         margin-bottom: 20px;
+        margin-top: 20px;
     }
 
     .container > div {
@@ -37,7 +38,7 @@
     h1, h2 {
         font-family: 'Didot', serif;
         text-align: center;
-        color: #ffffff;
+        color: #0b3d61;
         font-size: 30px;
         margin-bottom: 5px;
         text-transform: uppercase;
@@ -47,7 +48,7 @@
     h3 {
         font-family: 'Fredoka One', cursive;
         text-align: center;
-        color: #ffffff;
+        color: #0b3d61;
         font-size: 60px;
         margin-bottom: 5px;
         text-transform: uppercase;
@@ -76,6 +77,10 @@
         color: #ffffff;
     }
 
+    label {
+        color: #67bbf7;
+    }
+
     #id,
     #firstName,
     #LastName,
@@ -95,7 +100,7 @@
     }
 
     #submit {
-        background-color: #007BFF;
+        background-color: #0b3d61;
         color: #fff;
         border: 1px solid #67bbf7;
     }
@@ -124,17 +129,17 @@
         </div>
         <div class="container-content">
             <form id="addForm" method="post" action="">
-                <div class="label">ID :</div>
+                <div class="label">ID</div>
                 <div class="input"><input type="text" id="id" name="id" placeholder="Masukkan Id Anda" required><br><br></div>
-                <div class="label">First Name :</div>
+                <div class="label">First Name</div>
                 <div class="input"><input type="text" id="firstName" name="firstName" placeholder="Masukkan Nama Awal Anda" required><br><br></div>
-                <div class="label">Last Name :</div>
+                <div class="label">Last Name</div>
                 <div class="input"><input type="text" id="LastName" name="LastName" placeholder="Masukkan Nama Akhir Anda" required><br><br></div>
-                <div class="label">Email :</div>
+                <div class="label">Email</div>
                 <div class="input"><input type="email" id="email" name="email" placeholder="Masukkan Email Anda" required><br><br></div>
-                <div class="label">Confirm Email :</div>
+                <div class="label">Confirm Email</div>
                 <div class="input"><input type="email" id="email2" name="email2" placeholder="Pastikan Email Anda Sama" required><br><br></div>
-                <div class="label">Profesi :</div>
+                <div class="label">Profesi</div>
                 <div class="input"><input type="text" id="profesi" name="profesi" placeholder="Masukkan Profesi Anda." required><br><br></div>
                 <input type="submit" id="submit" value="Submit">
             </form>
