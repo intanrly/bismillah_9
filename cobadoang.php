@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>PRAKTIKUM WEEK 9 ALGORITMA PEMROGRAMAN 2</title>
-    <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
     <style>
     body {
         font-family: 'Arial', sans-serif;
@@ -35,10 +35,9 @@
 
     /* Judul */
     h1, h2, h3 {
-        font-family: 'Bubblegum Sans', cursive;
+        font-family: 'Fredoka One', cursive;
         text-align: center;
         color: #ffffff;
-        border: 3px solid #296fa8; 
         font-size: 20px;
         margin-bottom: 5px;
         text-transform: uppercase;
