@@ -36,23 +36,17 @@
         text-align: center;
         color: #ffffff;
         font-size: 25px;
-        margin-bottom: 5px;
+        margin-top: 5px;
         text-transform: uppercase;
         font-weight: bold;
     }
 
-    #label {
-        text-align: center;
+    .label {
         color: #ffffff;
         cursor: pointer;
     }
 
-    #id,
-    #firstName,
-    #LastName,
-    #email,
-    #email2,
-    #profesi {
+    .input {
         text-align: center;
         background-color: #ffffff;
         color: #ffffff;
@@ -73,6 +67,7 @@
         cursor: pointer;
         margin-bottom: 5px;
         transition: background-color 0.6s ease;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
     }
 
     #searchInput {
