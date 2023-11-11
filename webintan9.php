@@ -48,7 +48,6 @@
         text-align: center;
         background-color: #ffffff;
         color: #ffffff;
-        border: 1px solid #296fa8;
         padding: 10px 20px;
         border-radius: 10px;
         cursor: pointer;
