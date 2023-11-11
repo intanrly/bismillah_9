@@ -40,16 +40,23 @@
         border-radius: 10px;
     }
 
-    th, td {
+    td {
         border: 1px solid #0b3d61;
         background-color: #ffffff;
         padding: 10px;
         color: #0b3d61;
     }
 
+    th {
+        border: 1px solid #ffffff;
+        background-color: #0b3d61;
+        padding: 10px;
+        color: #ffffff;
+    }
+
     #id,
     #firstName,
-    #lastName,
+    #LastName,
     #email,
     #email2,
     #profesi,
@@ -94,17 +101,17 @@
     <div id="container">
         <form id="addForm" method="post" action="">
             <label for="id">Id:</label>
-            <input type="text" id="id" name="id" required><br><br>
+            <input type="text" id="id" name="id" placeholder="Masukkan Id Anda" required><br><br>
             <label for="firstName">First Name:</label>
-            <input type="text" id="firstName" name="firstName" required><br><br>
-            <label for="LastName">First Name:</label>
-            <input type="text" id="LastName" name="LastName" required><br><br>
+            <input type="text" id="firstName" name="firstName" placeholder="Masukkan Nama Awal Anda" required><br><br>
+            <label for="LastName">Last Name:</label>
+            <input type="text" id="LastName" name="LastName" placeholder="Masukkan Nama Akhir Anda" required><br><br>
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required><br><br>
-            <label for="email2">Email2:</label>
-            <input type="email" id="email2" name="email2" required><br><br>
+            <input type="email" id="email" name="email" placeholder="Masukkan Email Anda" required><br><br>
+            <label for="email2">Confirm Email:</label>
+            <input type="email" id="email2" name="email2" placeholder="Pastikan Email Anda Sama" required><br><br>
             <label for="profesi">Profesi:</label>
-            <input type="text" id="profesi" name="profesi" required><br><br>
+            <input type="text" id="profesi" name="profesi" placeholder="Masukkan Profesi Anda." required><br><br>
             <input type="submit" id="submit" value="Submit">
         </form>
     </div>
@@ -118,7 +125,7 @@
             <th>First Name</th>
             <th>Last Name</th>
             <th>Email</th>
-            <th>Email2</th>
+            <th>Confirm Email</th>
             <th>Profesi</th>
         </tr>
         <?php
