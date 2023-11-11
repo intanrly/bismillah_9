@@ -7,7 +7,7 @@
     <style>
     body {
         font-family: 'Arial', sans-serif;
-        background-color: linear-gradient(to bottom right, #ff0000, #0000ff);
+        background: linear-gradient(to bottom, #f2f2f2, #c9c9c9);
         line-height: 1.6;
         margin: 0;
         padding: 0;
@@ -108,7 +108,7 @@
     #searchInput {
         text-align: center;
         background-color: #ffffff;
-        color: #67bbf7;
+        color: #296fa8;
         border: 1px solid #296fa8;
         padding: 10px 20px;
         border-radius: 10px;
@@ -146,7 +146,7 @@
         </div>
     </div>
 
-    <label for="searchInput">Search:</label>
+    <label for="searchInput">Search</label>
     <input type="text" id="searchInput" oninput="searchTable()" placeholder="Cari Data">
 
     <table id="mahasiswaTable">
