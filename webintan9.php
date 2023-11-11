@@ -52,7 +52,6 @@
         border-radius: 10px;
         margin-bottom: 5px;
         transition: background-color 0.3s ease;
-        justify-content: center;
     }
 
     #submit {
