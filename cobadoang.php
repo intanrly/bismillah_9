@@ -97,8 +97,8 @@
             <input type="text" id="id" name="id" required><br><br>
             <label for="firstName">First Name:</label>
             <input type="text" id="firstName" name="firstName" required><br><br>
-            <label for="lastName">Last Name:</label>
-            <input type="text" id="lastName" name="lastName" required><br><br>
+            <label for="LastName">First Name:</label>
+            <input type="text" id="LastName" name="LastName" required><br><br>
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required><br><br>
             <label for="email2">Email2:</label>
@@ -129,13 +129,13 @@
             $email = $_POST["email"];
             $email2 = $_POST["email2"];
             $profesi = $_POST["profesi"];
-            $lastname = $_POST["lastname"];
+            $LastName = $_POST["LastName"];
 
             // Membaca data dari file CSV
             $file = fopen("datapribadi.csv", "a+");
             if ($file) {
                 // Menambahkan data ke dalam file CSV
-                fputcsv($file, [$id, $firstName, $lastname, $email, $email2, $profesi]);
+                fputcsv($file, [$id, $firstName, $LastName, $email, $email2, $profesi]);
                 fclose($file);
             }
         }
