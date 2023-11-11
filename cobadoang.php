@@ -39,7 +39,13 @@
 
     }
 
-    input {
+    #id,
+    #firstName,
+    #LastName,
+    #email,
+    #email2,
+    #profesi,
+    #submit {
         text-align: center;
         align-items: center;
         background-color: #ffffff;
