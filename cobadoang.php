@@ -45,8 +45,9 @@
     #profesi,
     #submit {
         text-align: center;
+        align-items: center;
         background-color: #ffffff;
-        color: #67bbf7;
+        color: #ffffff;
         border: 1px solid #296fa8;
         padding: 10px 20px;
         border-radius: 10px;
@@ -86,9 +87,9 @@
         <img src ="moon.png" id="moon">
         <img src ="mountain.png" id="mountain">
         <img src ="road.png" id="road">
-        <h1 id="text">PRAKTIKUM WEEK 9 ALGORITMA PEMROGRAMAN 2</h1>
-        <h2 id="text">INTAN NURUL LAILY - 164221060</h2>
-        <h3 id="text">Post Data</h3>
+        <h1 id="text1">PRAKTIKUM WEEK 9 ALGORITMA PEMROGRAMAN 2</h1>
+        <h2 id="text2">INTAN NURUL LAILY - 164221060</h2>
+        <h3 id="text3">Post Data</h3>
     </section>
 
     <form id="addForm" method="post" action="">
