@@ -92,7 +92,7 @@
     <h3>Post Data</h3>
 
     <div id="container">
-        <form id="addForm">
+        <form id="addForm" method="post" action="">
             <label for="id">Id:</label>
             <input type="text" id="id" name="id" required><br><br>
             <label for="firstName">First Name:</label>
@@ -126,10 +126,10 @@
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $id = $_POST["id"];
             $firstName = $_POST["firstName"];
-            $lastName = $_POST["lastName"];
             $email = $_POST["email"];
             $email2 = $_POST["email2"];
             $profesi = $_POST["profesi"];
+            $lastName = $_POST["lastName"];
 
             // Membaca data dari file CSV
             $file = fopen("datapribadi.csv", "a+");
