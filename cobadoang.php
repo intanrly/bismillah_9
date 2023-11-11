@@ -4,10 +4,11 @@
     <title>PRAKTIKUM WEEK 9 ALGORITMA PEMROGRAMAN 2</title>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Didot&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <style>
     body {
         font-family: 'Arial', sans-serif;
-        background: linear-gradient(to bottom, #ffeb3b, #ffc107);
+        background: linear-gradient(to bottom, #f2f2f2, #c9c9c9);
         line-height: 1.6;
         margin: 0;
         padding: 0;
@@ -25,34 +26,6 @@
         margin: 0 auto;
         margin-bottom: 20px;
         margin-top: 20px;
-    }
-
-    .container > div {
-        flex: 1;
-    }
-
-    .container > div:first-child {
-        margin-right: 20px;
-    }
-
-    h1, h2 {
-        font-family: 'Didot', serif;
-        text-align: center;
-        color: #0b3d61;
-        font-size: 30px;
-        margin-bottom: 5px;
-        text-transform: uppercase;
-        font-weight: bold;
-    }
-
-    h3 {
-        font-family: 'Fredoka One', cursive;
-        text-align: center;
-        color: #0b3d61;
-        font-size: 60px;
-        margin-bottom: 5px;
-        text-transform: uppercase;
-        font-weight: bold;
     }
 
     table {
@@ -121,12 +94,17 @@
 </head>
 
 <body>
+    <section>
+        <img src ="bg.jpg" id="bg">
+        <img src ="moon.png" id="moon">
+        <img src ="mountain.png" id="mountain">
+        <img src ="road.png" id="road">
+        <h1 id="text">PRAKTIKUM WEEK 9 ALGORITMA PEMROGRAMAN 2</h1>
+        <h2 id="text">INTAN NURUL LAILY - 164221060</h2>
+        <h3 id="text">Post Data</h3>
+    </section>
+    
     <div class="container">
-        <div>
-            <h1>PRAKTIKUM WEEK 9 ALGORITMA PEMROGRAMAN 2</h1>
-            <h2>INTAN NURUL LAILY - 164221060</h2>
-            <h3>Post Data</h3>
-        </div>
         <div class="container-content">
             <form id="addForm" method="post" action="">
                 <div class="label">ID</div>
@@ -217,6 +195,23 @@
                 }
             }
         }
+    </script>
+    <script type="text/javascript">
+        let bg = document.getElementById("bg");
+        let moon = document.getElementById("moon");
+        let mountain = document.getElementById("mountain");
+        let road = document.getElementById("road");
+        let text = document.getElementById("text");
+
+        window.addEventListener('scroll', function(){
+            var value = window.scrollY;
+
+            bg.style.top = value * 0.5 + 'px';
+            moon.style.left = value * 0.5 + 'px';
+            mountain.style.top = value * 0.15 + 'px';
+            road.style.top = value * 0.15 + 'px';
+            text.style.top = value * 1 + 'px';
+        })
     </script>
 </body>
 </html>
