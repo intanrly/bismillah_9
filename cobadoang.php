@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>PRAKTIKUM WEEK 9 ALGORITMA PEMROGRAMAN 2</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap" rel="stylesheet">
     <style>
     body {
         font-family: 'Arial', sans-serif;
@@ -19,7 +20,7 @@
         padding: 20px;
         border-radius: 10px;
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-        width: 600px;
+        width: 80%;
         margin: 0 auto;
         margin-bottom: 20px;
     }
@@ -34,9 +35,10 @@
 
     /* Judul */
     h1, h2, h3 {
-        font-family: 'Montserrat', sans-serif;
+        font-family: 'Bubblegum Sans', cursive;
         text-align: center;
-        color: #296fa8;
+        color: #ffffff;
+        border: 3px solid #296fa8; 
         font-size: 20px;
         margin-bottom: 5px;
         text-transform: uppercase;
@@ -105,10 +107,6 @@
 </head>
 
 <body>
-    <h1>PRAKTIKUM WEEK 9 ALGORITMA PEMROGRAMAN 2</h1>
-    <h2>INTAN NURUL LAILY - 164221060</h2>
-    <h3>Post Data</h3>
-
     <div class="container">
         <div>
             <h1>PRAKTIKUM WEEK 9 ALGORITMA PEMROGRAMAN 2</h1>
