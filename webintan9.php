@@ -34,7 +34,8 @@
         text-align: center;
         color: #ffffff;
         font-size: 25px;
-        margin-top: 5px;
+        margin-top: 20px;
+        margin-bottom: 20px;
         text-transform: uppercase;
         font-weight: bold;
     }
@@ -108,17 +109,17 @@
     <div class="container">
         <form id="addForm" method="post" action="">
             <div class="label">ID</div>
-            <div class="input"><input type="text" id="id" name="id" placeholder="Masukkan Id Anda" required><br><br></div>
+            <div class="input"><input type="text" id="id" name="id" required><br><br></div>
             <div class="label">First Name</div>
-            <div class="input"><input type="text" id="firstName" name="firstName" placeholder="Masukkan Nama Awal Anda" required><br><br></div>
+            <div class="input"><input type="text" id="firstName" name="firstName" required><br><br></div>
             <div class="label">Last Name</div>
-            <div class="input"><input type="text" id="LastName" name="LastName" placeholder="Masukkan Nama Akhir Anda" required><br><br></div>
+            <div class="input"><input type="text" id="LastName" name="LastName" required><br><br></div>
             <div class="label">Email</div>
-            <div class="input"><input type="email" id="email" name="email" placeholder="Masukkan Email Anda" required><br><br></div>
+            <div class="input"><input type="email" id="email" name="email" required><br><br></div>
             <div class="label">Confirm Email</div>
-            <div class="input"><input type="email" id="email2" name="email2" placeholder="Pastikan Email Anda Sama" required><br><br></div>
+            <div class="input"><input type="email" id="email2" name="email2" required><br><br></div>
             <div class="label">Profesi</div>
-            <div class="input"><input type="text" id="profesi" name="profesi" placeholder="Masukkan Profesi Anda." required><br><br></div>
+            <div class="input"><input type="text" id="profesi" name="profesi" required><br><br></div>
             <input type="submit" id="submit" value="Submit">
         </form>
     </div>
