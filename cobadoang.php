@@ -35,6 +35,7 @@
     label {
         color: #ffffff;
         text-align: center;
+        justify-content: center;
     }
 
     input {
@@ -52,6 +53,7 @@
         padding: 20px;
         border-radius: 10px;
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        justify-content: center;
     }
 
     #submit {
