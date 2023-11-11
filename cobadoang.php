@@ -67,13 +67,13 @@
         cursor: pointer;
         margin-bottom: 5px;
         transition: background-color 0.6s ease;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        padding: 10px 20px;
     }
 
     #searchInput {
         text-align: center;
         background-color: #ffffff;
-        color: #296fa8;
+        color: #ffffff;
         border: 1px solid #296fa8;
         padding: 10px 20px;
         border-radius: 10px;
