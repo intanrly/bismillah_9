@@ -113,7 +113,7 @@
             <div class="input"><input type="email" id="email2" name="email2" placeholder="Pastikan Email Anda Sama" required><br><br></div>
             <div class="label">Profesi :</div>
             <div class="input"><input type="text" id="profesi" name="profesi" placeholder="Masukkan Profesi Anda." required><br><br></div>
-            <div class="input"><input type="submit" id="submit" value="Submit">
+            <input type="submit" id="submit" value="Submit">
         </form>
     </div>
 
