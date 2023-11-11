@@ -97,8 +97,8 @@
             <input type="text" id="id" name="id" required><br><br>
             <label for="firstName">First Name:</label>
             <input type="text" id="firstName" name="firstName" required><br><br>
-            <label for="lastname">Last Name:</label>
-            <input type="text" id="lastname" name="lastname" required><br><br>
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" required><br><br>
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required><br><br>
             <label for="email2">Email2:</label>
