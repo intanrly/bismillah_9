@@ -11,7 +11,9 @@
         padding: 0;
     }
 
-    #container {
+    .container {
+        display: flex;
+        align-items: center;
         text-align: center;
         background-color: #67bbf7;
         padding: 20px;
@@ -20,6 +22,14 @@
         width: 600px;
         margin: 0 auto;
         margin-bottom: 20px;
+    }
+
+    .container > div {
+        flex: 1;
+    }
+
+    .container > div:first-child {
+        margin-right: 20px;
     }
 
     /* Judul */
@@ -99,22 +109,29 @@
     <h2>INTAN NURUL LAILY - 164221060</h2>
     <h3>Post Data</h3>
 
-    <div id="container">
-        <form id="addForm" method="post" action="">
-            <div class="label">ID :</div>
-            <div class="input"><input type="text" id="id" name="id" placeholder="Masukkan Id Anda" required><br><br></div>
-            <div class="label">First Name :</div>
-            <div class="input"><input type="text" id="firstName" name="firstName" placeholder="Masukkan Nama Awal Anda" required><br><br></div>
-            <div class="label">Last Name :</div>
-            <div class="input"><input type="text" id="LastName" name="LastName" placeholder="Masukkan Nama Akhir Anda" required><br><br></div>
-            <div class="label">Email :</div>
-            <div class="input"><input type="email" id="email" name="email" placeholder="Masukkan Email Anda" required><br><br></div>
-            <div class="label">Confirm Email :</div>
-            <div class="input"><input type="email" id="email2" name="email2" placeholder="Pastikan Email Anda Sama" required><br><br></div>
-            <div class="label">Profesi :</div>
-            <div class="input"><input type="text" id="profesi" name="profesi" placeholder="Masukkan Profesi Anda." required><br><br></div>
-            <input type="submit" id="submit" value="Submit">
-        </form>
+    <div class="container">
+        <div>
+            <h1>PRAKTIKUM WEEK 9 ALGORITMA PEMROGRAMAN 2</h1>
+            <h2>INTAN NURUL LAILY - 164221060</h2>
+            <h3>Post Data</h3>
+        </div>
+        <div class="container-content">
+            <form id="addForm" method="post" action="">
+                <div class="label">ID :</div>
+                <div class="input"><input type="text" id="id" name="id" placeholder="Masukkan Id Anda" required><br><br></div>
+                <div class="label">First Name :</div>
+                <div class="input"><input type="text" id="firstName" name="firstName" placeholder="Masukkan Nama Awal Anda" required><br><br></div>
+                <div class="label">Last Name :</div>
+                <div class="input"><input type="text" id="LastName" name="LastName" placeholder="Masukkan Nama Akhir Anda" required><br><br></div>
+                <div class="label">Email :</div>
+                <div class="input"><input type="email" id="email" name="email" placeholder="Masukkan Email Anda" required><br><br></div>
+                <div class="label">Confirm Email :</div>
+                <div class="input"><input type="email" id="email2" name="email2" placeholder="Pastikan Email Anda Sama" required><br><br></div>
+                <div class="label">Profesi :</div>
+                <div class="input"><input type="text" id="profesi" name="profesi" placeholder="Masukkan Profesi Anda." required><br><br></div>
+                <input type="submit" id="submit" value="Submit">
+            </form>
+        </div>
     </div>
 
     <label for="searchInput">Search:</label>
