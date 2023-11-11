@@ -49,7 +49,9 @@
         background-color: #ffffff;
         color: #ffffff;
         border: 1px solid #296fa8;
+        padding: 10px 20px;
         border-radius: 10px;
+        cursor: pointer;
         margin-bottom: 5px;
         transition: background-color 0.3s ease;
     }
@@ -79,10 +81,14 @@
     }
 
     .container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
+        text-align: center;
+        background-color: #0a2a43;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        max-width: 600px;
+        margin: 0 auto;
+        margin-bottom: 20px;
     }
 
 </style>
