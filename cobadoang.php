@@ -3,6 +3,7 @@
 <head>
     <title>PRAKTIKUM WEEK 9 ALGORITMA PEMROGRAMAN 2</title>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Didot&display=swap" rel="stylesheet">
     <style>
     body {
         font-family: 'Arial', sans-serif;
@@ -33,12 +34,21 @@
         margin-right: 20px;
     }
 
-    /* Judul */
-    h1, h2, h3 {
-        font-family: 'Fredoka One', cursive;
+    h1 {
+        font-family: 'Didot', serif;
         text-align: center;
         color: #ffffff;
         font-size: 20px;
+        margin-bottom: 5px;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
+    h2, h3 {
+        font-family: 'Fredoka One', cursive;
+        text-align: center;
+        color: #ffffff;
+        font-size: 60px;
         margin-bottom: 5px;
         text-transform: uppercase;
         font-weight: bold;
@@ -106,9 +116,9 @@
 </head>
 
 <body>
+    <h1>PRAKTIKUM WEEK 9 ALGORITMA PEMROGRAMAN 2</h1>
     <div class="container">
         <div>
-            <h1>PRAKTIKUM WEEK 9 ALGORITMA PEMROGRAMAN 2</h1>
             <h2>INTAN NURUL LAILY - 164221060</h2>
             <h3>Post Data</h3>
         </div>
