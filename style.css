@@ -3,7 +3,6 @@
 {
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
 }
 
 body {
@@ -52,10 +51,11 @@ section img {
     pointer-events: none;
 }
 
-#text {
+#h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
     position: relative;
     color: #fff;
-    font-size: 10em;
+    font-size: 30px;
     z-index: 1;
 }
 

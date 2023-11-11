@@ -8,17 +8,12 @@
     <style>
     body {
         font-family: 'Arial', sans-serif;
-        background: linear-gradient(to bottom, #f2f2f2, #c9c9c9);
-        line-height: 1.6;
-        margin: 0;
-        padding: 0;
     }
 
     .container {
         display: flex;
         align-items: center;
         text-align: center;
-        background-color: #67bbf7;
         padding: 20px;
         border-radius: 10px;
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
@@ -103,7 +98,7 @@
         <h2 id="text">INTAN NURUL LAILY - 164221060</h2>
         <h3 id="text">Post Data</h3>
     </section>
-    
+
     <div class="container">
         <div class="container-content">
             <form id="addForm" method="post" action="">
