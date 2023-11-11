@@ -36,8 +36,6 @@
         color: #ffffff;
         text-align: center;
         justify-content: center;
-        display: grid;
-        place-items: center;
 
     }
 
@@ -72,6 +70,16 @@
         margin-bottom: 10px;
         transition: background-color 0.3s ease
     }
+
+    #container {
+        text-align: center;
+        background-color: #0a2a43;
+        padding: 20px;
+        max-width: 100%;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+
 </style>
 
 </head>
@@ -82,25 +90,26 @@
         <img src ="moon.png" id="moon">
         <img src ="mountain.png" id="mountain">
         <img src ="road.png" id="road">
-        <h2 id="text2">INTAN NURUL LAILY - 164221060</h2>
-        <h3 id="text3">Praktikum W9 - Post Data</h3>
+        <h2 id="text2">Post Data</h2>
     </section>
 
-    <form id="addForm" method="post" action="">
-        <div class="label">ID</div>
-        <div class="input"><input type="text" id="id" name="id" placeholder="Masukkan Id Anda" required><br><br></div>
-        <div class="label">First Name</div>
-        <div class="input"><input type="text" id="firstName" name="firstName" placeholder="Masukkan Nama Awal Anda" required><br><br></div>
-        <div class="label">Last Name</div>
-        <div class="input"><input type="text" id="LastName" name="LastName" placeholder="Masukkan Nama Akhir Anda" required><br><br></div>
-        <div class="label">Email</div>
-        <div class="input"><input type="email" id="email" name="email" placeholder="Masukkan Email Anda" required><br><br></div>
-        <div class="label">Confirm Email</div>
-        <div class="input"><input type="email" id="email2" name="email2" placeholder="Pastikan Email Anda Sama" required><br><br></div>
-        <div class="label">Profesi</div>
-        <div class="input"><input type="text" id="profesi" name="profesi" placeholder="Masukkan Profesi Anda." required><br><br></div>
-        <input type="submit" id="submit" value="Submit">
-    </form>
+    <div class="container">
+        <form id="addForm" method="post" action="">
+            <div class="label">ID</div>
+            <div class="input"><input type="text" id="id" name="id" placeholder="Masukkan Id Anda" required><br><br></div>
+            <div class="label">First Name</div>
+            <div class="input"><input type="text" id="firstName" name="firstName" placeholder="Masukkan Nama Awal Anda" required><br><br></div>
+            <div class="label">Last Name</div>
+            <div class="input"><input type="text" id="LastName" name="LastName" placeholder="Masukkan Nama Akhir Anda" required><br><br></div>
+            <div class="label">Email</div>
+            <div class="input"><input type="email" id="email" name="email" placeholder="Masukkan Email Anda" required><br><br></div>
+            <div class="label">Confirm Email</div>
+            <div class="input"><input type="email" id="email2" name="email2" placeholder="Pastikan Email Anda Sama" required><br><br></div>
+            <div class="label">Profesi</div>
+            <div class="input"><input type="text" id="profesi" name="profesi" placeholder="Masukkan Profesi Anda." required><br><br></div>
+            <input type="submit" id="submit" value="Submit">
+        </form>
+    </div>
 
     <label for="searchInput">Search</label>
     <input type="text" id="searchInput" oninput="searchTable()" placeholder="Cari Data">
