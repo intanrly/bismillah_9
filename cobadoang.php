@@ -15,7 +15,7 @@
             <label for="firstName">First Name:</label>
             <input type="text" id="firstName" name="firstName" required><br><br>
             <label for="lastName">Last Name:</label>
-            <input type="text" id="lastName" name="lastName" required><br><br>
+            <input type="text" id="lastName" name="Terakhir Name Required><br><br>
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required><br><br>
             <label for="email2">Email2:</label>
@@ -48,18 +48,16 @@
             $email2 = $_POST["email2"];
             $profesi = $_POST["profesi"];
 
-            // Menambahkan data ke dalam tabel
-            echo "<tr>";
-            echo "<td>" . $id . "</td>";
-            echo "<td>" . $firstName . "</td>";
-            echo "<td>" . $lastName . "</td>";
-            echo "<td>" . $email . "</td>";
-            echo "<td>" . $email2 . "</td>";
-            echo "<td>" . $profesi . "</td>";
-            echo "</tr>";
+            // Membaca data dari file CSV
+            $file = fopen("datapribadi.csv", "a+");
+            if ($file) {
+                // Menambahkan data ke dalam file CSV
+                fputcsv($file, [$id, $firstName, $lastName, $email, $email2, $profesi]);
+                fclose($file);
+            }
         }
 
-        // Membaca data dari file CSV
+        // Membaca data dari file CSV dan menampilkannya dalam tabel
         $file = fopen("datapribadi.csv", "r");
         if ($file) {
             while (($data = fgetcsv($file, 1000, ",")) !== false) {
