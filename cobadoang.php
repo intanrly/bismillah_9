@@ -34,17 +34,17 @@
         margin-right: 20px;
     }
 
-    h1 {
+    h1, h2 {
         font-family: 'Didot', serif;
         text-align: center;
         color: #ffffff;
-        font-size: 20px;
+        font-size: 30px;
         margin-bottom: 5px;
         text-transform: uppercase;
         font-weight: bold;
     }
 
-    h2, h3 {
+    h3 {
         font-family: 'Fredoka One', cursive;
         text-align: center;
         color: #ffffff;
@@ -116,9 +116,9 @@
 </head>
 
 <body>
-    <h1>PRAKTIKUM WEEK 9 ALGORITMA PEMROGRAMAN 2</h1>
     <div class="container">
         <div>
+            <h1>PRAKTIKUM WEEK 9 ALGORITMA PEMROGRAMAN 2</h1>
             <h2>INTAN NURUL LAILY - 164221060</h2>
             <h3>Post Data</h3>
         </div>
@@ -142,7 +142,7 @@
     </div>
 
     <label for="searchInput">Search:</label>
-    <input type="text" id="searchInput" oninput="searchTable()" placeholder="Cari berdasarkan ID atau Nama...">
+    <input type="text" id="searchInput" oninput="searchTable()" placeholder="Cari Data">
 
     <table id="mahasiswaTable">
         <tr>
