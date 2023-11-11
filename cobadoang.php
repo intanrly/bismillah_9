@@ -10,19 +10,6 @@
         font-family: 'Arial', sans-serif;
     }
 
-    .container {
-        display: flex;
-        align-items: center;
-        text-align: center;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-        width: 80%;
-        margin: 0 auto;
-        margin-bottom: 20px;
-        margin-top: 20px;
-    }
-
     table {
         width: 80%;
         border-collapse: collapse;
@@ -46,7 +33,8 @@
     }
 
     label {
-        color: #67bbf7;
+        color: #ffffff;
+        text-align: center;
     }
 
     #id,
@@ -65,6 +53,10 @@
         cursor: pointer;
         margin-bottom: 5px;
         transition: background-color 0.3s ease;
+        align-items: center;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
     }
 
     #submit {
@@ -99,25 +91,21 @@
         <h3 id="text">Post Data</h3>
     </section>
 
-    <div class="container">
-        <div class="container-content">
-            <form id="addForm" method="post" action="">
-                <div class="label">ID</div>
-                <div class="input"><input type="text" id="id" name="id" placeholder="Masukkan Id Anda" required><br><br></div>
-                <div class="label">First Name</div>
-                <div class="input"><input type="text" id="firstName" name="firstName" placeholder="Masukkan Nama Awal Anda" required><br><br></div>
-                <div class="label">Last Name</div>
-                <div class="input"><input type="text" id="LastName" name="LastName" placeholder="Masukkan Nama Akhir Anda" required><br><br></div>
-                <div class="label">Email</div>
-                <div class="input"><input type="email" id="email" name="email" placeholder="Masukkan Email Anda" required><br><br></div>
-                <div class="label">Confirm Email</div>
-                <div class="input"><input type="email" id="email2" name="email2" placeholder="Pastikan Email Anda Sama" required><br><br></div>
-                <div class="label">Profesi</div>
-                <div class="input"><input type="text" id="profesi" name="profesi" placeholder="Masukkan Profesi Anda." required><br><br></div>
-                <input type="submit" id="submit" value="Submit">
-            </form>
-        </div>
-    </div>
+    <form id="addForm" method="post" action="">
+        <div class="label">ID</div>
+        <div class="input"><input type="text" id="id" name="id" placeholder="Masukkan Id Anda" required><br><br></div>
+        <div class="label">First Name</div>
+        <div class="input"><input type="text" id="firstName" name="firstName" placeholder="Masukkan Nama Awal Anda" required><br><br></div>
+        <div class="label">Last Name</div>
+        <div class="input"><input type="text" id="LastName" name="LastName" placeholder="Masukkan Nama Akhir Anda" required><br><br></div>
+        <div class="label">Email</div>
+        <div class="input"><input type="email" id="email" name="email" placeholder="Masukkan Email Anda" required><br><br></div>
+        <div class="label">Confirm Email</div>
+        <div class="input"><input type="email" id="email2" name="email2" placeholder="Pastikan Email Anda Sama" required><br><br></div>
+        <div class="label">Profesi</div>
+        <div class="input"><input type="text" id="profesi" name="profesi" placeholder="Masukkan Profesi Anda." required><br><br></div>
+        <input type="submit" id="submit" value="Submit">
+    </form>
 
     <label for="searchInput">Search</label>
     <input type="text" id="searchInput" oninput="searchTable()" placeholder="Cari Data">
