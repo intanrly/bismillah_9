@@ -32,6 +32,21 @@
         color: #ffffff;
     }
 
+    h3 {
+        text-align: center;
+        color: #fffff;
+        font-size: 25px;
+        margin-bottom: 5px;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
+    #label {
+        text-align: center;
+        color: #ffffff;
+        cursor: pointer;
+    }
+
     #id,
     #firstName,
     #LastName,
@@ -50,9 +65,14 @@
     }
 
     #submit {
-        background-color: #0a2a43;
-        color: #fff;
+        text-align: center;
+        background-color: #ffffff;
+        color: #0a2a43;
         border: 1px solid #67bbf7;
+        border-radius: 10px;
+        cursor: pointer;
+        margin-bottom: 5px;
+        transition: background-color 0.6s ease;
     }
 
     #searchInput {
@@ -87,6 +107,8 @@
         <img src ="road.png" id="road">
         <h2 id="text2">Post Data</h2>
     </section>
+
+    <h3>Intan Nurul Laily - 164221060</h3?
 
     <div class="container">
         <form id="addForm" method="post" action="">
