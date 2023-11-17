@@ -103,10 +103,10 @@
 
 <body>
     <section>
-        <img src ="bg.jpg" id="bg">
-        <img src ="moon.png" id="moon">
-        <img src ="mountain.png" id="mountain">
-        <img src ="road.png" id="road">
+        <img src ="https://intanurul04.alwaysdata.net/bismillah_9/bg.jpg" id="bg">
+        <img src ="https://intanurul04.alwaysdata.net/bismillah_9/moon.png" id="moon">
+        <img src ="https://intanurul04.alwaysdata.net/bismillah_9/mountain.png" id="mountain">
+        <img src ="https://intanurul04.alwaysdata.net/bismillah_9/road.png" id="road">
         <h2 id="text2">Post Data</h2>
     </section>
 
